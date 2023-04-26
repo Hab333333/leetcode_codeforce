@@ -1,0 +1,14 @@
+class Solution:
+    def addDigits(self, num: int) -> int:
+        sum = int(0)
+        while num>0:
+            s = num % 10
+            num = num //10
+            sum = sum + s
+            if num //10 == 0 and num != 0:
+               sum = sum + num
+               num = num //10
+               if sum // 10 >0:
+                   num = sum
+                   sum = 0
+        return sum
