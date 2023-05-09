@@ -1,0 +1,15 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        c = set(nums)
+        c = list(c)
+        r = len(nums)
+        nums.clear()
+        for i in range(r):
+            if i >= len(c):
+                nums.append("_")
+            else:
+                nums.append(c[i])
+                nums.sort()
+
+        return len(c)
+        return nums
